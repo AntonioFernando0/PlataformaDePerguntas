@@ -9,7 +9,15 @@ app.set ('view engine', 'ejs')
 
 
 app.get ("/",(req, res) => {
-    res.render("index")
+    let nome = "Antonio Júnior"
+    let lang = "Javascript"
+    res.render("index", {
+        nome: nome,
+        lang: lang,
+        empresa: "Fernando Santana",
+        inscritos: 10000
+
+    })
 })
 
 app.listen ( 8080, () => {
