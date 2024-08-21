@@ -21,6 +21,7 @@ app.get ("/:nome/:lang",(req, res) => {
         {nome: "Cola", preco: 5.10},
         {nome: "Carne", preco: 40.25},
         {nome: "RedBull", preco: 10.00},
+        {nome: "Água", preco: 3.50},
         {nome: "Ovos", preco: 1.05}
     ]
     res.render("index", {
