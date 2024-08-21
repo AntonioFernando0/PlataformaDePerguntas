@@ -1,5 +1,6 @@
 const express = require ("express")
 const app = express()
+require('events').EventEmitter.defaultMaxListeners = 15;
 
 
 
@@ -14,13 +15,21 @@ app.get ("/:nome/:lang",(req, res) => {
     let exibirmsg = true
 
 
-    let produtos = 
+    let produtos = [
+
+        {nome: "Doritos", preco: 3.14},
+        {nome: "Cola", preco: 5.10},
+        {nome: "Carne", preco: 40.25},
+        {nome: "RedBull", preco: 10.00},
+        {nome: "Ovos", preco: 1.05}
+    ]
     res.render("index", {
         nome: nome,
         lang: lang,
         empresa: "Fernando Santana",
         inscritos: 10000,
-        msg: exibirmsg
+        msg: exibirmsg,
+        produtos: produtos
 
     })
 })
