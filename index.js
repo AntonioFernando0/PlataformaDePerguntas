@@ -35,6 +35,6 @@ app.get ("/:nome/:lang",(req, res) => {
     })
 })
 
-app.listen ( 800, () => {
+app.listen ( 80, () => {
     console.log(" App rodando!")
 })
