@@ -7,6 +7,7 @@ require('events').EventEmitter.defaultMaxListeners = 15;
 // Estou dizendo para o Express usar o EJS como view enginer
 
 app.set ('view engine', 'ejs')
+
 app.use (express.static('public'))
 
 
