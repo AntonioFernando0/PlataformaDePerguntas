@@ -7,12 +7,13 @@ require('events').EventEmitter.defaultMaxListeners = 15;
 // Estou dizendo para o Express usar o EJS como view enginer
 
 app.set ('view engine', 'ejs')
+app.use (express.static('public'))
 
 
 app.get ("/:nome/:lang",(req, res) => {
     let nome = req.params.nome
     let lang = req.params.lang 
-    let exibirmsg = true
+    let exibirmsg = false
 
 
     let produtos = [
