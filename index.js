@@ -1,7 +1,18 @@
 const express = require("express");
 const app = express();
-
 const bodyParser = require("body-parser")
+const connection = require("./database/database")
+
+//Database
+
+connection
+    .authenticate()
+    .then(() => {
+        console.log("Conexão feita com sucesso!");
+    })
+    .catch((msgErro) => {
+        console.log(msgErro);
+    });
 
 // Configuração do EJS como view engine
 app.set('view engine', 'ejs');
