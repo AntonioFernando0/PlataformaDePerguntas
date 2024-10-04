@@ -15,3 +15,5 @@ const pergunta = connection.define('pergunta', {
 pergunta.sync({force: false}).then(() => {
     console.log("Tabele criada!")
 })
+
+module.exports = pergunta
